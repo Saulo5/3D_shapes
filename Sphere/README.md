@@ -54,7 +54,7 @@ if false then it moves on each axis the given value on the point (considered as 
 
 <h3 align="left">Example:</h3>
 
-![Example](data\spheres.gif)
+![Example](spheres.gif)
 
 
 
