@@ -52,7 +52,8 @@ if false then it moves on each axis the given value on the point (considered as 
 
 `o3d.visualization.draw_geometries([pcd_1, pcd_2])`
 
-![Example](Spheres.png)
+<h3 align="left">Example:</h3>
+![Example](data/spheres.gif)
 
 
 
