@@ -66,6 +66,15 @@ class Sphere:
                 points1 = np.vstack([points1, POINT])
             points_circle[i] = points1
             points = np.vstack([points, points1])
+            
+            # rotate points to axis
+        ROT = rotation_matrix_from_vectors(self.axisDirect, [0, 0, 1])
+        pcd_act = o3d.geometry.PointCloud()
+        pcd_act.points = o3d.utility.Vector3dVector(np.asarray(points))
+        pcd_act.rotate(ROT.T, center=[0, 0, 0])
+        points = np.asarray(pcd_act.points)
+        pcd_act.clear()
+        
             # translate points to center
         points[:, 0] = points[:, 0] - self.center[0]
         points[:, 1] = points[:, 1] - self.center[1]
